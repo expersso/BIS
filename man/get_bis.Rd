@@ -18,8 +18,6 @@ A data frame
 Download, parse, and read into memory a BIS data set
 }
 \examples{
-\dontrun{
 datasets <- get_datasets()
-rates <- get_bis(datasets$url[16])
-}
+df <- get_bis(datasets$url[6])
 }

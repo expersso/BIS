@@ -59,7 +59,8 @@ head(rates)
 We plot these data for a subset of countries.
 
 ```{r plot}
-library(tidyverse)
+library(dplyr)
+library(ggplot2)
 library(zoo)
 
 rates_plot <- rates %>%

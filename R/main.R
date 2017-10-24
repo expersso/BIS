@@ -82,10 +82,8 @@ get_datasets <- function() {
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' datasets <- get_datasets()
-#' rates <- get_bis(datasets$url[16])
-#' }
+#' df <- get_bis(datasets$url[6])
 get_bis <- function(url, ...) {
   path <- download_bis(url, ...)
   read_bis(path)
