@@ -1,5 +1,4 @@
 if(getRversion() >= "2.15.1") utils::globalVariables(c("obs_value", "time_period"))
-if(getRversion() >= "2.15.1") utils::globalVariables(c("obs_value", "time_period"))
 
 complete_url <- function(x) paste0("https://www.bis.org", x)
 

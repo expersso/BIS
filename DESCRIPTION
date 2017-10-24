@@ -1,6 +1,6 @@
 Package: BIS
 Type: Package
-Title: Programmatic access to Bank for International Settlements Data
+Title: Programmatic Access to Bank for International Settlements Data
 Version: 0.1.0
 Authors@R: person("Eric", "Persson", email = "expersso5@gmail.com",
     role = c("aut", "cre"))
@@ -9,7 +9,7 @@ Description: Provides an interface to data provided by the Bank for Internationa
 License: CC0
 Encoding: UTF-8
 LazyData: true
-URL: https://bis.org
+URL: https://www.bis.org
 BugReports: https://github.com/expersso/BIS/issues
 Suggests:
     knitr,
