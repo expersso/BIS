@@ -4,8 +4,9 @@ Title: Programmatic Access to Bank for International Settlements Data
 Version: 0.1.0
 Authors@R: person("Eric", "Persson", email = "expersso5@gmail.com",
     role = c("aut", "cre"))
-Description: Provides an interface to data provided by the Bank for International Settlements, 
-    allowing for programmatic retrieval of a large quantity of (central) banking data.
+Description: Provides an interface to data provided by the Bank for International 
+  Settlements <https://www.bis.org>, allowing for programmatic retrieval of a 
+  large quantity of (central) banking data.
 License: CC0
 Encoding: UTF-8
 LazyData: true
