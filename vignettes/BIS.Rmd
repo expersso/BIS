@@ -64,7 +64,7 @@ library(zoo)
 
 rates_plot <- rates %>%
   mutate(date = as.Date(as.yearmon(date))) %>%
-  filter(grepl("^(XM|US|CH|JP|GB|CA)", reference_area))
+  filter(grepl("^(XM|US|CH|JP|GB|CA)", ref_area))
 
 ggplot(rates_plot, aes(date, obs_value, color = reference_area)) +
   geom_hline(yintercept = 0, linetype = "dashed",

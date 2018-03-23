@@ -21,7 +21,7 @@ gather_bis <- function(df) {
 }
 
 clean_names <- function(x) {
-  tolower(gsub("'", "", gsub("[[:space:]]", "_", x)))
+  make.unique(tolower(gsub("'", "", gsub("[[:space:]]", "_", x))), "_")
 }
 
 nskips <- function(path) {
