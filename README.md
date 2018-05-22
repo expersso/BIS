@@ -22,26 +22,27 @@ library(BIS)
 
 datasets <- get_datasets()
 head(datasets, 20)
-## # A tibble: 17 x 2
+## # A tibble: 18 x 2
 ##    name                                                     url           
 ##    <chr>                                                    <chr>         
 ##  1 Locational banking statistics                            https://www.b~
 ##  2 Consolidated banking statistics                          https://www.b~
 ##  3 Debt securities statistics                               https://www.b~
-##  4 Global liquidity indicators                              https://www.b~
-##  5 Credit to the non-financial sector                       https://www.b~
-##  6 Credit-to-GDP gaps                                       https://www.b~
-##  7 Debt service ratios for the private non-financial sector https://www.b~
-##  8 Property prices: selected series                         https://www.b~
-##  9 Property prices: long series                             https://www.b~
-## 10 US dollar exchange rates (monthly, quarterly and annual) https://www.b~
-## 11 US dollar exchange rates (daily)                         https://www.b~
-## 12 Effective exchange rate indices (monthly)                https://www.b~
-## 13 Effective exchange rate indices (daily)                  https://www.b~
-## 14 Triennial Survey statistics on turnover                  https://www.b~
-## 15 Consumer prices                                          https://www.b~
-## 16 Policy rates (monthly)                                   https://www.b~
-## 17 Policy rates (daily)                                     https://www.b~
+##  4 Credit to the non-financial sector                       https://www.b~
+##  5 Credit-to-GDP gaps                                       https://www.b~
+##  6 Debt service ratios for the private non-financial sector https://www.b~
+##  7 Global liquidity indicators                              https://www.b~
+##  8 OTC derivatives outstanding                              https://www.b~
+##  9 US dollar exchange rates (monthly, quarterly and annual) https://www.b~
+## 10 US dollar exchange rates (daily)                         https://www.b~
+## 11 Effective exchange rate indices (monthly)                https://www.b~
+## 12 Effective exchange rate indices (daily)                  https://www.b~
+## 13 Triennial Survey statistics on turnover                  https://www.b~
+## 14 Property prices: selected series                         https://www.b~
+## 15 Property prices: long series                             https://www.b~
+## 16 Consumer prices                                          https://www.b~
+## 17 Policy rates (monthly)                                   https://www.b~
+## 18 Policy rates (daily)                                     https://www.b~
 ```
 
 The function `get_bis` takes a url as input and downloads and parses the corresponding CSV file from the BIS website. This automatic parsing of the data is the major contribution of this package, since the different CSVs follow different formats.
@@ -49,7 +50,7 @@ The function `get_bis` takes a url as input and downloads and parses the corresp
 The following code loads monthly data on central banks' policy rates:
 
 ``` r
-rates <- get_bis(datasets$url[16], quiet = TRUE)
+rates <- get_bis(datasets$url[datasets$name == "Policy rates (monthly)"], quiet = TRUE)
 head(rates)
 ## # A tibble: 6 x 6
 ##   freq  frequency ref_area reference_area date    obs_value

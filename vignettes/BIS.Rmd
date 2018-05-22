@@ -51,7 +51,7 @@ different formats.
 The following code loads monthly data on central banks' policy rates:
 
 ```{r rates}
-rates <- get_bis(datasets$url[16], quiet = TRUE)
+rates <- get_bis(datasets$url[datasets$name == "Policy rates (monthly)"], quiet = TRUE)
 head(rates)
 ```
 
